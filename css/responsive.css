@@ -777,7 +777,7 @@
         height: 350px;
     }
     .tf__brand ul li {
-        font-size: 35px;
+        font-size: 28px; /* Reduced brand text size */
     }
     .tf__blog .common_btn {
         position: inherit;
@@ -982,6 +982,69 @@
     ==============================*/
 }
 
+/* Styles for very small screens */
+@media (max-width: 360px) {
+    .tf__banner_text h1,
+    .tf__banner_text h1 span {
+        font-size: 36px !important; /* Even smaller for very narrow screens */
+    }
+
+    .tf__banner_text h3 { /* Also adjust the subtitle in banner if needed */
+        font-size: 22px;
+    }
+
+    .tf__section_heading h2 {
+        font-size: 30px; /* Smaller section headings */
+        line-height: 1.3;
+    }
+
+    .tf__about_text_2 ul li .top .img {
+        width: 60px; /* Further reduce icon holder size */
+        height: 60px;
+    }
+
+    .tf__about_text_2 ul li .top h3 {
+        font-size: 22px; /* Further reduce for About Me titles */
+    }
+
+    .tf__single_service_2 .text span { /* Icon holder in service */
+        width: 70px;
+        height: 70px;
+        top: -35px;
+    }
+
+    .tf__single_service_2 .text h3 { /* Service titles */
+        font-size: 1.6rem; /* Or appropriate smaller size like 20px */
+        margin-top: 30px; /* Adjust spacing if icon is smaller */
+    }
+
+    .tf__brand ul li {
+        font-size: 24px; /* Smaller marquee text */
+    }
+
+    .tf__skills_2 .nav .nav-item button {
+        padding: 8px 15px; /* Smaller padding for skill tabs */
+        font-size: 12px; /* Smaller font for skill tabs */
+        margin: 5px 3px; /* Adjust margin if they get too close */
+    }
+
+    /* Adjust general paragraph font size if needed, though global changes are usually better */
+    /* p, span {
+        font-size: 15px;
+        line-height: 1.7;
+    } */
+
+    /* Contact section text if needed */
+    .tf__contact_2_text h3 {
+        font-size: 1.6rem; /* Or 22px-24px */
+    }
+    .tf__contact_2_text p,
+    .tf__contact_2_text a {
+        font-size: 15px; /* if 17px is too large */
+    }
+
+}
+
 @media (max-width: 575.99px) {
     /*==============================
      HOME PAGE START
@@ -1044,13 +1107,30 @@
     }
     .tf__banner_text h1,
     .tf__banner_text h1 span {
-        font-size: 48px !important;
+        font-size: 40px !important; /* Further reduced */
     }
     .tf__banner_text h3 {
-        font-size: 28px;
+        font-size: 26px; /* Slightly reduced */
     }
-    .tf__banner_text ul li a {
-        margin-bottom: 20px;
+    .tf__banner_text ul {
+        flex-direction: column; /* Stack buttons */
+        align-items: stretch; /* Make them full width */
+    }
+    .tf__banner_text ul li {
+        width: 100%;
+        margin-right: 0; /* Remove right margin if buttons are stacked */
+    }
+    .tf__banner_text ul li a.common_btn,
+    .tf__banner_text ul li a.banner_video_btn {
+        width: 100%;
+        margin-bottom: 15px; /* Add space between stacked buttons */
+        justify-content: center; /* Ensure text/icon is centered */
+    }
+    .tf__banner_text ul li:last-child a {
+        margin-bottom: 0;
+    }
+    .tf__banner_text ul li a { /* This rule was for margin-bottom, now handled above more specifically */
+        /* margin-bottom: 20px; */ /* Original rule, effectively overridden */
     }
     .tf__banner_text {
         margin-bottom: 0;
@@ -1066,8 +1146,8 @@
         left: 2%;
     }
     .tf__section_heading h2 {
-        font-size: 36px;
-        line-height: 45px;
+        font-size: 32px; /* Reduced section heading size */
+        line-height: 1.3; /* Adjusted line height */
     }
     .tf__section_heading h2 br {
         display: none;
@@ -1313,12 +1393,17 @@
         margin-top: 70px;
     }
     .tf__about_text_2 ul li .top .img {
-        width: 90px;
-        height: 90px;
+        width: 70px; /* Reduced icon holder size */
+        height: 70px; /* Reduced icon holder size */
     }
     .tf__about_text_2 ul li .top h3 {
-        font-size: 24px;
+        font-size: 24px; /* Kept as is, already reduced */
         width: 100%;
+    }
+    .tf__single_service_2 .text span { /* Added for Service icon holder */
+        width: 80px;
+        height: 80px;
+        top: -40px;
     }
     .tf__about_img_2 .tf__about_img_text {
         padding: 15px;

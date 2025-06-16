@@ -13,8 +13,8 @@
     opacity: 0;
     visibility: hidden;
     transform: translateY(15px);
-    -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .progress.active {
@@ -30,7 +30,7 @@
     text-align: center;
     line-height: 46px;
     font-size: 16px;
-    color: var(--bodyColor);
+    color: var(--colorPrimary);
     left: 0;
     top: 0;
     height: 46px;
@@ -38,25 +38,31 @@
     cursor: pointer;
     display: block;
     z-index: 1;
-    -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-.progress:hover::after {
-    position: absolute;
-    font-family: "Font Awesome 5 Pro";
-    content: "\f077";
-    color: var(--bodyColor);
-    transition: all 200ms linear;
-}
+/* Removing the old .progress:hover::after rule, new rules will be added later */
 
 .progress svg path {
     fill: none;
 }
 
 .progress svg.progress-svg path {
-    stroke: var(--bodyColor);
+    stroke: var(--colorPrimary);
     stroke-width: 4;
     box-sizing: border-box;
-    transition: all 200ms linear;
+    transition: all 0.3s ease-in-out;
+}
+
+.progress:hover {
+    background-color: var(--colorPrimary);
+}
+
+.progress:hover::after {
+    color: var(--colorBlack);
+}
+
+.progress:hover svg.progress-svg path {
+    stroke: var(--colorBlack);
 }
