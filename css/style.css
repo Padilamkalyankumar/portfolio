@@ -43,11 +43,14 @@ li {
 a {
     display: inline-block;
     text-decoration: none;
-    color: var(--colorWhite);
+    color: var(--colorPrimary); /* Use primary accent color */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
 }
 
-a:hover {
-    text-decoration: none;
+a:hover,
+a:focus { /* Added focus state */
+    color: #76ffbf; /* A slightly lighter shade of the primary color */
+    text-decoration: underline;
 }
 
 h1,
@@ -61,11 +64,18 @@ h6 {
     color: var(--colorWhite);
 }
 
+h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 1.5rem; }
+h2 { font-size: 2.2rem; font-weight: 600; margin-bottom: 1.25rem; }
+h3 { font-size: 1.8rem; font-weight: 600; margin-bottom: 1rem; }
+h4 { font-size: 1.5rem; font-weight: 500; margin-bottom: 1rem; }
+h5 { font-size: 1.25rem; font-weight: 500; margin-bottom: 0.75rem; }
+h6 { font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem; }
+
 p,
 span {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 400;
-    line-height: 1.7;
+    line-height: 1.8;
     margin: 0;
     color: var(--bodyColor);
 }
@@ -76,6 +86,7 @@ body {
     font-family: var(--PrimaryFont);
     background: var(--bodyBg);
     color: var(--colorWhite);
+    font-size: 17px;
 }
 
 img {
@@ -112,7 +123,7 @@ button {
     --colorWhite: #ffffff;
     --colorBlack: #02050a;
     --ratingColor: #ffba08;
-    --bodyColor: #a2a2a2;
+    --bodyColor: #b0b0b0;
     --PrimaryFont: "Poppins", sans-serif;
     --secondaryFont: "Open Sans", sans-serif;
 }
@@ -126,7 +137,7 @@ button {
     background: var(--colorPrimary);
     color: var(--colorBlack);
     font-weight: 500;
-    transition: all 0.3s linear 0s;
+    transition: all 0.3s ease-in-out;
 }
 
 .common_btn:hover {
@@ -149,6 +160,7 @@ button {
     font-size: 50px;
     font-weight: 600;
     line-height: 1.3;
+    margin-bottom: 30px; /* Added margin for spacing after section titles */
 }
 
 .tf__breadcrumb {
@@ -358,7 +370,7 @@ button {
     text-transform: uppercase;
     margin: 0;
     line-height: 12px;
-    transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
     font-family: var(--PrimaryFont);
     letter-spacing: 1px;
     padding: 32px 20px;
@@ -438,11 +450,11 @@ button {
     display: block;
     border-bottom: 1px solid #2c73651a;
     padding: 7px 20px;
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .droap_menu li a:hover,
@@ -484,7 +496,7 @@ button {
     border-radius: 50%;
     top: 18px;
     opacity: 1;
-    transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 
 .offcanvas .offcanvas-body .offcanvas_title {
@@ -562,11 +574,11 @@ button {
     font-size: 16px;
     font-weight: 400;
     color: var(--colorWhite);
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .tf__toggle_link ul li a:hover {
@@ -702,7 +714,7 @@ button {
     align-items: center;
     gap: 10px;
     text-transform: capitalize;
-    transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 
 .banner_video_btn i {
@@ -1027,11 +1039,11 @@ button {
     background: linear-gradient( 0deg, rgba(2, 5, 10, 1) 0%, rgba(2, 5, 10, 0.5802696078431373) 61%, rgba(2, 5, 10, 0) 100%);
     transform: scaleY(0);
     transform-origin: bottom;
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     -webkit-transform: scaleY(0);
     -moz-transform: scaleY(0);
     -ms-transform: scaleY(0);
@@ -1183,7 +1195,7 @@ button {
 }
 
 .tf__blog_img img {
-    transition: all linear 0.3s;
+    transition: transform 0.3s ease-in-out;
 }
 
 .tf__blog_text {
@@ -1229,11 +1241,11 @@ button {
     display: block;
     font-size: 20px;
     font-weight: 600;
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .tf__blog_text a:hover {
@@ -1375,11 +1387,12 @@ main {
 
 .tf__footer_copyright ul li a,
 .tf__footer_copyright p {
-    opacity: 0.5;
+    color: var(--bodyColor); /* Ensure links also use bodyColor */
+    opacity: 0.8; /* Increased opacity */
 }
 
 .tf__footer_copyright ul li a:hover {
-    color: var(--colorPrimary);
+    color: var(--colorPrimary); /* On hover, revert to primary color */
     opacity: 1;
 }
 
@@ -1466,11 +1479,11 @@ main {
     letter-spacing: 1px;
     padding: 0;
     background: none !important;
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .main_menu_2 ul li a span {
@@ -1483,11 +1496,11 @@ main {
     border-radius: 5px;
     margin-right: 17px;
     font-size: 24px;
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .main_menu_2 ul li a span {
@@ -1567,15 +1580,17 @@ main {
 }
 
 .tf__about_text_2 ul li .top h3 {
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 30px; /* Consistent with global H3 (1.8rem = ~30.6px) */
+    font-weight: 600; /* Consistent with global H3 */
     margin-top: 20px;
+    margin-bottom: 1rem; /* Added for consistency */
 }
 
 .tf__about_text_2 ul li p {
-    font-weight: 500;
-    line-height: 28px;
+    font-weight: 500; /* Slightly more emphasis than global p */
+    line-height: 1.8; /* Consistent with global p for readability */
     margin-top: 15px;
+    margin-bottom: 1rem; /* Added for spacing */
 }
 
 .tf__about_img_2 {
@@ -1676,11 +1691,11 @@ main {
     padding: 40px;
     border-radius: 5px;
     position: relative;
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .tf__single_service_2 .text span {
@@ -1700,10 +1715,10 @@ main {
 }
 
 .tf__single_service_2 .text h3 {
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 1.8rem; /* Align with global h3 */
+    font-weight: 600; /* Align with global h3 */
     margin-top: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Custom margin-bottom is fine */
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -1712,7 +1727,7 @@ main {
     border: 1px solid var(--colorPrimary);
     padding: 15px 30px;
     border-radius: 5px;
-    transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
     position: absolute;
     left: 50%;
     bottom: 0;
@@ -1751,11 +1766,11 @@ main {
     background: #141c27;
     font-size: 16px;
     padding: 18px 40px;
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .tf__skills_2 .nav .nav-item button i {
@@ -1776,8 +1791,8 @@ main {
 }
 
 .tf__single_skill_2 h3 {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 1.25rem; /* Increased size for skill names */
+    font-weight: 600;   /* Increased weight for skill names */
     border-bottom: 1px solid var(--colorPrimary);
     display: inline-block;
     padding-right: 30px;
@@ -1823,7 +1838,9 @@ main {
 
 .tf__single_skill_2 .tf__team_skills_bar_single p {
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Reduced margin for de-emphasized text */
+    font-size: 0.9em; /* Smaller font size for de-emphasis */
+    color: #888888; /* Lighter color for de-emphasis */
 }
 
 .tf__single_skill_2 .tf__team_skills_bar_single .barfiller {
@@ -1912,11 +1929,11 @@ main {
     font-weight: 500;
     margin: 15px 0;
     line-height: 26px;
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .tf__blog_text_2 .title:hover {
@@ -1949,11 +1966,11 @@ main {
     border: 1px solid var(--colorPrimary);
     border-radius: 5px;
     padding: 17px 20px;
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .tf__blog_text_2 .read_btn i {
@@ -1980,26 +1997,28 @@ main {
 }
 
 .tf__contact_2_text h3 {
-    font-size: 20px;
-    margin: 30px 0 15px;
+    font-size: 1.8rem; /* Consistent with global h3 */
+    font-weight: 600;  /* Consistent with global h3 */
+    margin: 30px 0 15px; /* Specific margin is fine */
 }
 
 .tf__contact_2_text p {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 28px;
-    margin-bottom: 23px;
+    /* font-size will be inherited from global p (17px) */
+    font-weight: 500; /* Specific emphasis */
+    /* line-height will be inherited from global p (1.8) */
+    margin-bottom: 23px; /* Specific margin */
 }
 
 .tf__contact_2_text a {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: inherit; /* Inherit font size from parent (likely p) */
+    font-weight: 500; /* Specific emphasis */
     display: block;
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    /* color will be inherited from global a (var(--colorPrimary)) */
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .tf__contact_2_text a:hover {
@@ -2034,11 +2053,11 @@ main {
     margin-top: 15px;
     font-size: 16px;
     font-weight: 500;
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .contact_form_2 form button:hover {
@@ -2180,11 +2199,11 @@ main {
     right: 25px;
     background: none;
     color: var(--colorWhite);
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .tf__sidebar_search form button:hover {
@@ -2197,16 +2216,16 @@ main {
     justify-content: space-between;
     align-items: center;
     margin-top: 15px;
-    transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 
 .tf__sidebar_category ul li a span {
     font-weight: 500;
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .tf__sidebar_category ul li a:hover {
@@ -2237,7 +2256,7 @@ main {
     font-weight: 500;
     display: block;
     margin-bottom: 10px;
-    transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 
 .tf__sidebar_comments ul li .text a:hover {
@@ -2281,11 +2300,11 @@ main {
     background: #55e6a594;
     transform: scale(0.8);
     opacity: 0;
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     -webkit-transform: scale(0.8);
     -moz-transform: scale(0.8);
     -ms-transform: scale(0.8);
@@ -2315,11 +2334,11 @@ main {
     background: #151c25;
     padding: 9px 14px;
     text-transform: capitalize;
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .tf__sidebar_tags ul li a:hover {
@@ -2439,7 +2458,7 @@ main {
     border-radius: 5px;
     background: #151c25;
     font-size: 14px;
-    transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 
 .details_blog_share .social_share li a:hover {
@@ -2499,11 +2518,11 @@ main {
 }
 
 .next_prev_button li a i {
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .previous_post {
@@ -2569,11 +2588,11 @@ main {
 .tf__details_bloger a {
     display: inline-block;
     margin-top: 20px;
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .tf__details_bloger a:hover {
@@ -2904,8 +2923,8 @@ h5.preloader-text::after {
     height: 30px;
     border-radius: 50%;
     pointer-events: none;
-    opacity: 0.5;
-    border: 2px solid rgb(255, 255, 255);
+    opacity: 0.7; /* Increased opacity */
+    border: 2px solid var(--colorPrimary); /* Use theme's primary color */
 }
 
 .ball-drag,
